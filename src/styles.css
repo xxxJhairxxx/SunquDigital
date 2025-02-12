@@ -1,0 +1,18 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@config "../tailwind.config.js";
+
+:root{
+  --font-primary: "Rajdhani", serif;
+  --font-family: "Rubik", serif;
+}
+
+*{
+  font-family: "Rubik", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+
+@import "tailwindcss";
