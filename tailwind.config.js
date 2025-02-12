@@ -4,11 +4,12 @@
     ],
     theme: {
       extend: { colors: {
-        primary: '#060922',
+        primary: '#ED2C41',
         secondary: '#FFC107',
       }},
       fontFamily: {
-        primary: ['var(--font-primary)'],
+        primary: ['Rajdhani', 'serif'],
+        secondary: ['Rubik', 'serif'],
       },
       screens: {
         phone: '414px',
