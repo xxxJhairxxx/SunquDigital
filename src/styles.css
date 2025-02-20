@@ -69,8 +69,9 @@
 html {
   font-size: 62.5%;
   font-family: "rubik", serif;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
+  color: #616161
 }
 
 body{
@@ -78,3 +79,6 @@ body{
 
 }
 
+.shadow-card{
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}

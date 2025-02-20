@@ -1,24 +1,21 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from '../../../layout/navbar/navbar.component';
-import { ContainerComponent } from '../../globals/container.component';
-import { ThumbComponent } from '../../atoms/thumb.component';
-import { splitText } from '../../../utils/string.utils';
-import { buttonComponent } from "../../atoms/button.component";
+import { ContainerComponent } from '../../Components/globals/container.component';
+import { ThumbComponent } from '../../Components/atoms/thumb.component';
+import { splitText } from '../../utils/string.utils';
+import { buttonComponent } from "../../Components/atoms/button.component";
 
 @Component({
-  selector: 'app-header',
-  imports: [NavbarComponent, ContainerComponent, ThumbComponent, buttonComponent],
+  selector: 'section-header',
+  imports: [ContainerComponent, ThumbComponent, buttonComponent],
   template: `
     <Header class="h-[100vh] w-full flex items-center justify-center">
-      <app-navbar />
-
-      <app-container class="w-full flex items-center justify-between pt-[4rem]">
+      <app-container class="  w-full flex items-center justify-center gap-[10%] pt-[4rem]">
         <app-thumb
-          class="h-[65vh]"
+          class="h-[65vh] max-h-[60rem]"
           imgUrl="/assets/images/perfi-header.png"
           alt="girl with celphone"
         />
-        <div class="h-[40rem] flex flex-col justify-center">
+        <div class="h-[40rem] flex flex-col justify-center ">
           <h1 class=" text-[8rem] w-[48rem]  leading-[10rem] font-primary font-bold text-white">
             @for (item of decorationTitle; track $index ){
               <span class="[&:nth-child(2)]:text-primary">{{item}}</span>
