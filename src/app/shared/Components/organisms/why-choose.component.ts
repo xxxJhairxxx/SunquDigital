@@ -6,8 +6,9 @@ import { ThumbComponent } from '../atoms/thumb.component';
 @Component({
   selector: 'section-why-choose',
   template: `
-    <section class="py-[7rem]">
-      <app-container class="flex justify-center gap-[10%]">
+    <section class=" relative">
+     <app-thumb class="absolute z-[-1] w-full h-full left-0 right-0" imgUrl="../../../../assets/images/why-choose.jpg" />
+      <app-container class="flex justify-center gap-[10%] py-[6rem]">
         <div class="w-[35%]">
           <app-title
             class=" bg-red-500"
@@ -16,7 +17,7 @@ import { ThumbComponent } from '../atoms/thumb.component';
           />
           <p>{{ text1 }}</p>
         </div>
-        <div class="w-[55%]">
+        <div class="w-[50%]">
           <ul class="flex border-b-3 border-primary">
             @for(item of menu;track $index){
             <li
@@ -28,7 +29,7 @@ import { ThumbComponent } from '../atoms/thumb.component';
             </li>
             }
           </ul>
-          <div class="p-8 pt-10 leading-[3rem] flex flex-col gap-7">
+          <div class="pb-10 px-12 pt-12 leading-[3rem] flex flex-col gap-7">
             {{ activeContent?.text }}
             <div class="flex gap-7">
               <app-thumb class="w-[20rem]" [imgUrl]="activeContent!.image" />
