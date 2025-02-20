@@ -7,8 +7,8 @@ import { ThumbComponent } from '../atoms/thumb.component';
   selector: 'section-why-choose',
   template: `
     <section class="py-[7rem]">
-      <app-container class="flex justify-center gap-[15%]">
-        <div class="w-[50rem] ">
+      <app-container class="flex justify-center gap-[10%]">
+        <div class="w-[35%]">
           <app-title
             class=" bg-red-500"
             [title]="title1"
@@ -16,7 +16,7 @@ import { ThumbComponent } from '../atoms/thumb.component';
           />
           <p>{{ text1 }}</p>
         </div>
-        <div class="w-[70rem]">
+        <div class="w-[55%]">
           <ul class="flex border-b-3 border-primary">
             @for(item of menu;track $index){
             <li
