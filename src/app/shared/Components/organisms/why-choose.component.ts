@@ -8,8 +8,8 @@ import { ThumbComponent } from '../atoms/thumb.component';
   template: `
     <section class=" relative">
      <app-thumb class="absolute z-[-1] w-full h-full left-0 right-0" imgUrl="../../../../assets/images/why-choose.jpg" />
-      <app-container class="flex justify-center gap-[10%] py-[6rem]">
-        <div class="w-[35%]">
+      <app-container class="flex laptop:flex-row flex-col justify-center gap-[10%] py-[6rem]">
+        <div class="laptop:w-[35%]">
           <app-title
             class=" bg-red-500"
             [title]="title1"
@@ -17,13 +17,13 @@ import { ThumbComponent } from '../atoms/thumb.component';
           />
           <p>{{ text1 }}</p>
         </div>
-        <div class="w-[50%]">
-          <ul class="flex border-b-3 border-primary">
+        <div class="laptop:w-[50%]">
+          <ul class="flex  border-b-3 border-primary">
             @for(item of menu;track $index){
             <li
               (click)="activeTab = item.title"
               [class]="activeTab === item.title ? 'bg-primary text-white' : ''"
-              class="cursor-pointer px-8 pt-4 pb-3 font-[500] text-black"
+              class="cursor-pointer px-8 pt-4 pb-3 text-xl font-[500] text-black"
             >
               {{ item.title }}
             </li>
@@ -31,7 +31,7 @@ import { ThumbComponent } from '../atoms/thumb.component';
           </ul>
           <div class="pb-10 px-12 pt-12 leading-[3rem] flex flex-col gap-7">
             {{ activeContent?.text }}
-            <div class="flex gap-7">
+            <div class="flex laptop:flex-row flex-col gap-7">
               <app-thumb class="w-[20rem]" [imgUrl]="activeContent!.image" />
               <ul>
                 @for(element of activeContent?.items;track $index ){

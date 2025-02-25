@@ -6,26 +6,12 @@ interface Iserviciocard {
 }
 
 @Component({
-  selector: 'app-serviciocard',
-  template: ` <style>
-      .decoration::before {
-        position: absolute;
-        content: '';
-        left: 0;
-        bottom: 0;
-        width: 4rem;
-        height: 0.2rem;
-        background: #fb2c36;
-      }
-    </style>
-
-    <article class="flex flex-col w-[30rem] gap-7 shadow-card px-16 py-10 rounded-2xl bg-white">
-      <div class="w-[8rem] h-[8rem] p-8 my-4 rounded-full bg-red-500/5">
-        <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 25 22"
-        fill="none"
-      >
+  selector: 'card-servicio',
+  template: ` <article
+    class="flex flex-col laptop:w-[30rem] gap-7 shadow-card px-16 py-10 rounded-2xl bg-white"
+  >
+    <div class="w-[8rem] h-[8rem] p-8 my-4 rounded-full bg-red-500/5">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 22" fill="none">
         <path
           d="M12.4999 16.0562C10.0699 16.0562 8.09995 14.2452 8.09995 12.0113C8.09995 9.77729 10.0699 7.96631 12.4999 7.96631C14.93 7.96631 16.8999 9.77729 16.8999 12.0113C16.8999 14.2452 14.93 16.0562 12.4999 16.0562Z"
           stroke="#ED2C41"
@@ -61,31 +47,42 @@ interface Iserviciocard {
           stroke-linecap="round"
           stroke-linejoin="round"
         />
-        </svg>
-      </div>
-      
-      <h3
-        class="text-[2.9rem] font-[700] text-black font-primary leading-[3.5rem] relative decoration"
+      </svg>
+    </div>
+
+    <h3
+      class="text-[2.9rem] font-[700] text-black font-primary leading-[3.5rem] relative decoration"
+    >
+      {{ serviciocard.title }}
+    </h3>
+    <p class="leading-[3rem] text-[1.8rem]">{{ serviciocard.description }}</p>
+    <button
+      class="flex w-fit gap-3 items-center font-[400] py-[0.5rem] my-[0.5rem]"
+    >
+      <span>Read More</span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="9"
+        height="9"
+        viewBox="0 0 11 11"
+        fill="none"
       >
-        {{ serviciocard.title }}
-      </h3>
-      <p class="leading-[3rem] text-[1.8rem]">{{ serviciocard.description }}</p>
-      <button
-        class="flex w-fit gap-3 items-center font-[400] py-[0.5rem] my-[0.5rem]"
-      >
-        <span>Read More</span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="9"
-          height="9"
-          viewBox="0 0 11 11"
-          fill="none"
-        >
-          <path d="M0 10.5H2L7 5.5L2 0.5H0L5 5.5L0 10.5Z" fill="black" />
-          <path d="M4 10.5H6L11 5.5L6 0.5H4L9 5.5L4 10.5Z" fill="black" />
-        </svg>
-      </button>
-    </article>`
+        <path d="M0 10.5H2L7 5.5L2 0.5H0L5 5.5L0 10.5Z" fill="black" />
+        <path d="M4 10.5H6L11 5.5L6 0.5H4L9 5.5L4 10.5Z" fill="black" />
+      </svg>
+    </button>
+  </article>`,
+  styles: `
+     .decoration::before {
+        position: absolute;
+        content: '';
+        left: 0;
+        bottom: 0;
+        width: 4rem;
+        height: 0.2rem;
+        background: #fb2c36;
+      }
+`,
 })
 export class ServicioCardComponent {
   @Input() serviciocard!: Iserviciocard;

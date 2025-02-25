@@ -14,14 +14,14 @@ interface Iserviciocard {
   template: `
     <section class="z-[20] relative">
       <app-container class="py-[5rem]">
-        <div class="flex items-center justify-center gap-[10%] py-[4rem]">
+        <div class="flex laptop:flex-row flex-col items-center justify-center gap-[10%] py-[4rem]">
           <app-title class="w-[100%]" [title]="title" [subtitle]="subtitle" />
 
           <p class="text-[1.7rem]">{{ text }}</p>
         </div>
-        <div class="bg+red+2 flex w-full justify-between gap-[1%] relative z-20">
+        <div class="bg+red+2 flex laptop:flex-row flex-col w-full items-center justify-between gap-[2em] relative z-20">
           @for(item of serviciocard;track $index){
-          <app-serviciocard [serviciocard]="item" />
+          <card-servicio [serviciocard]="item" />
           }
         </div>
       </app-container>

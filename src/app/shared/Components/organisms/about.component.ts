@@ -12,10 +12,10 @@ import { ThumbComponent } from '../atoms/thumb.component';
         imgUrl="../../../../assets/images/about.jpg"
       />
       <app-container
-        class="flex items-center justify-center gap-[10%]  pt-[10rem] pb-[3.5rem]"
+        class="flex laptop:flex-row flex-col items-center justify-center gap-[10%]  pt-[10rem] pb-[3.5rem]"
       >
         <app-thumb imgUrl="../../../../assets/images/about2.png" />
-        <div class="w-[53.5rem] flex flex-col justify-center gap-5">
+        <div class="laptop:w-[53.5rem] flex flex-col justify-center gap-5">
           <app-title [title]="title" [subtitle]="subtitle" [white]="true" />
 
           <p class="text-white leading-[3rem]">

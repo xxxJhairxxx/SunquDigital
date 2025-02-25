@@ -8,25 +8,25 @@ import { buttonComponent } from "../../Components/atoms/button.component";
   selector: 'section-header',
   imports: [ContainerComponent, ThumbComponent, buttonComponent],
   template: `
-    <Header class="h-[100vh] w-full flex items-center justify-center">
-      <app-container class="  w-full flex items-center justify-center gap-[10%] pt-[4rem]">
+    <Header class="h-[100vh] w-full flex items-center justify-center ">
+      <app-container class="  laptop:w-full w-[90%] mx-auto flex laptop:flex-row  flex-col-reverse   items-center justify-evenly gap-[2em] pt-[4rem]">
         <app-thumb
-          class="h-[65vh] max-h-[60rem]"
+          class="laptop:h-[65vh] w-[100%] laptop:w-auto max-h-[60rem]  "
           imgUrl="/assets/images/perfi-header.png"
           alt="girl with celphone"
         />
-        <div class="h-[40rem] flex flex-col justify-center ">
-          <h1 class=" text-[8rem] w-[48rem]  leading-[10rem] font-primary font-bold text-white">
+        <div class="laptop:h-[40rem] flex flex-col  gap-[0.8em]">
+          <h1 class=" text-titular laptop:w-[48rem]  leading-[1.2em] font-primary font-bold text-white">
             @for (item of decorationTitle; track $index ){
               <span class="[&:nth-child(2)]:text-primary">{{item}}</span>
             }  
           </h1>
 
-            <p class="text-white text-[1.8rem] leading-[3.5rem] w-[52rem] ">
+            <p class="text-white text-subtitle leading-[1.8em] laptop:w-[52rem] ">
               {{text}}
             </p>
 
-            <app-button class="my-10">Comencemos</app-button>
+            <app-button class="my-[1em] hidden">Comencemos</app-button>
         </div>
 
       </app-container>
