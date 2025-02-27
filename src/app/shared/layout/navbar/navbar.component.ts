@@ -1,4 +1,13 @@
 import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { RouterModule } from '@angular/router';
+
+
+interface IRouter{
+  name:string;
+  url:string
+}
+
+
 @Component({
   selector: 'app-navbar',
   template: `<nav
@@ -12,7 +21,14 @@ import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
           class=" z-[10]  full py-[0rem] px-[3rem] w-full flex items-center bg-black laptop:bg-transparent"
           imgUrl="/assets/images/logo.png"
         >
-          <img class="h-[90%]" src="/assets/images/logo.png" alt="logo sunqudigital" />
+        <a routerLink="/">
+        <img
+            class="h-[90%]"
+            src="/assets/images/logo.png"
+            alt="logo sunqudigital"
+          />
+        </a>
+          
         </div>
 
         <ul
@@ -23,7 +39,7 @@ import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
           <li
             class="cursor-pointer laptop:border-0 border-t-[0.01rem] border-gray-600 py-[0.8rem] laptop:w-fit w-full px-[3rem] laptop:p-0"
           >
-            {{ item }}
+            <a [routerLink]="'/'+item.url"> {{ item.name }}</a>
           </li>
           }
         </ul>
@@ -150,10 +166,15 @@ import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
   }
 }
   `,
-  imports: [],
+  imports: [RouterModule],
 })
 export class NavbarComponent implements AfterViewInit {
-  menu: Array<string> = ['Home', 'Compañia', 'Portafolio', 'Blog', 'Contacto'];
+  menu: Array<IRouter> = [
+    {name :'Home',url:'/'},
+     {name :'Compañia',url:'/company'},
+      {name :'Portafolio',url:'/portfolio'},
+       {name :'Blog',url:'/blog'},
+        {name :'Contacto',url:'/contact'}];
 
   isAtTop: boolean = true;
   isActive: boolean = false;
@@ -161,6 +182,8 @@ export class NavbarComponent implements AfterViewInit {
   @ViewChild('trigger', { static: false }) trigger!: ElementRef;
 
   observer!: IntersectionObserver;
+
+  constructor() {}
 
   ngAfterViewInit(): void {
     this.observer = new IntersectionObserver(

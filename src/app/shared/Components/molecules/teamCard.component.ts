@@ -8,7 +8,7 @@ interface network {
 
 @Component({
   selector: 'card-team',
-  template: ` <article class="w-[20rem] text-center ">
+  template: ` <article class="w-[28rem] text-center ">
     <app-thumb [imgUrl]="image"></app-thumb>
     <section class="py-6">
       <h4 class="text-[2.5rem] font-bold font-primary">{{ name }}</h4>

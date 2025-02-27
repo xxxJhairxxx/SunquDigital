@@ -11,7 +11,7 @@ import { TeamCardComponent } from '../molecules/teamCard.component';
         <app-title [title]="title" [subtitle]="subtitle" [center]="true" />
 
         <ul
-          class="flex laptop:flex-row flex-col items-center justify-center gap-[5rem]"
+          class="flex laptop:flex-row flex-col items-center py-[4rem] justify-center gap-[5rem]"
         >
           @for (item of team; track item.id) {
           <card-team
@@ -35,7 +35,7 @@ export class TeamComponent {
     {
       id: 1,
       image:
-        'https://scontent.flim38-1.fna.fbcdn.net/v/t39.30808-6/472735060_457781107394492_4773691668392770581_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeH0YEJEWaHMdqAEuQpUZtUC8wENqCEye5rzAQ2oITJ7mkuNf6EqH46JWyPSZBNTJ5b19a7Vqrvoudw4DjahF08x&_nc_ohc=sLCDowtxeKIQ7kNvgGr7pam&_nc_oc=AdhG_CTMVVsi8OduxxtwNy7itNKAToe3Kg_z0mFOtNcMeijXEhiz4wUgTEj11Y7lnEM&_nc_zt=23&_nc_ht=scontent.flim38-1.fna&_nc_gid=AnxmRPLcfaTxJqN5FDvXA2Q&oh=00_AYCPFkCqDGy8dz_Yc6TL74gSxpCv-hG_RozpfkEWLiwv9A&oe=67BFD1D2',
+        'https://i.postimg.cc/654SmQkC/472735060-457781107394492-4773691668392770581-n.jpg',
       name: 'Jhair Infanzon',
       ocupation: 'Web Developer',
       socialNetwork: [

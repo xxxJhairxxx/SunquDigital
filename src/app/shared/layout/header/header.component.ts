@@ -8,10 +8,10 @@ import { buttonComponent } from "../../Components/atoms/button.component";
   selector: 'section-header',
   imports: [ContainerComponent, ThumbComponent, buttonComponent],
   template: `
-    <Header class="h-[100vh] w-full flex items-center justify-center ">
-      <app-container class="  laptop:w-full w-[90%] mx-auto flex laptop:flex-row  flex-col-reverse   items-center justify-evenly gap-[2em] pt-[4rem]">
+    <Header class="h-[100vh] w-full flex items-center laptop:justify-center ">
+      <app-container class="  laptop:w-full  mx-auto flex laptop:flex-row  flex-col-reverse   laptop:items-center laptop:justify-evenly gap-[2em] pt-[4rem]">
         <app-thumb
-          class="laptop:h-[65vh] w-[100%] laptop:w-auto max-h-[60rem]  "
+          class="laptop:h-[65vh] tablet:w-[80%] mx-auto laptop:mx-0 w-[100%] laptop:w-auto max-h-[60rem]  "
           imgUrl="/assets/images/perfi-header.png"
           alt="girl with celphone"
         />
